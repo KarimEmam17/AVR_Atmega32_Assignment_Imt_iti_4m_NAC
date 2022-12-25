@@ -21,7 +21,9 @@ void LCD_void_set_CGRAM_ADD(u8 Copy_u8CGRAM_ADD);
 u32  LCD_u8_Count_Num_Digits(u32 Copy_u32_Num_VAL);
 void LCD_void_Write_Spaces(u32 Copy_u32_Num_Spaces);
 
-void LCD_void_Write_Num(u32 Copy_u32Num,u8 Copy_u8x_Pos,u8 Copy_u8y_Pos);
+//void LCD_void_Wirte_Float_Num(f32 Copy_f32_Num,u8 Copy_u8x_Pos,u8 Copy_u8y_Pos);
 
+void LCD_void_Write_Num(u32 Copy_u32Num,u8 Copy_u8x_Pos,u8 Copy_u8y_Pos);
+void LCD_void_Wirte_Float_Num(f32 Num);
 
 #endif /* LCD_INTERFACE_H_ */
