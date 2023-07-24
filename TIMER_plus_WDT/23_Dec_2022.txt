@@ -1,0 +1,33 @@
+Timer 1: 16 bit, system freq = 8 Mhz, Prescalar = 64
+
+Over flow time = Over flow counts * Ttick
+			   = ( 2^res ) * ( 1/Timer freq )
+			   = ( 2^res ) * ( Prescalar/system freq )
+			   = (2^16) * (64/8000000) = 0.524 sec
+			   = 524.288 msec
+			   
+2^16 count --> 524.288 msec
+		   --> 20 msec 
+		   --> 1 msec
+		   --> 2 msec
+		   --> 1.5 msec
+-------------------------------------------------------------
+ICU: input capture unit
+Ton, Toff
+Tp = Ton + Toff
+D = Ton\ Tp
+freq = 1 \ Tp
+---------------------------
+file.lss : listing files
+
+
+8 Mhz
+8000000 cycle --> 1 sec
+8000000 cycle --> 1000000 micro sec
+
+2 cycle --> ??
+
+
+
+
+
