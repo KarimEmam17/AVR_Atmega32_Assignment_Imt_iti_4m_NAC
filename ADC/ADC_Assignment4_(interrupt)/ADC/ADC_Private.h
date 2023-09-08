@@ -1,0 +1,45 @@
+/*
+ * ADC_PRIcate.h
+ *
+ *  Created on: Dec 9, 2022
+ *      Author: Almodather
+ */
+
+#ifndef ADC_PRIVATE_H_
+#define ADC_PRIVATE_H_
+
+#define ADC_U8_ADMUX		*((volatile u8*) 0x27)
+#define ADC_U8_ADCSRA		*((volatile u8*) 0x26)
+#define ADC_U8_ADCH			*((volatile u8*) 0x25)
+#define ADC_U8_ADCL			*((volatile u8*) 0x24)
+#define ADC_U8_SFIOR		*((volatile u8*) 0x50)
+
+#define  EXTI_u8_SREG     *((volatile u8*)0x5F)
+
+#define Global_Interrupt_bit	7
+
+#define ADMUX_REFS1		7
+#define ADMUX_REFS0		6
+#define ADMUX_ADLAR 	5
+#define	ADMUX_MUX4		4
+#define	ADMUX_MUX3		3
+#define ADMUX_MUX2		2
+#define ADMUX_MUX1		1
+#define ADMUX_MUX0		0
+
+
+#define ADCSRA_ADEN		7	//enable the adc
+#define ADCSRA_ADSC		6	// start  conversion
+#define ADCSRA_ADATE	5	//ADC auto  trigger Enable
+#define ADCSRA_ADIF		4	//ADC interrupt  flag
+#define ADCSRA_ADIE		3	//ADC Enable interrupt
+#define ADCSRA_ADPS2	2  	//prescalar
+#define ADCSRA_ADPS1	1	//prescalar
+#define ADCSRA_ADPS0	0	//prescalar
+
+#define SFIOR_ADTS2		7
+#define SFIOR_ADTS1		6
+#define SFIOR_ADTS0		5
+
+
+#endif /* ADC_PRIVATE_H_ */
