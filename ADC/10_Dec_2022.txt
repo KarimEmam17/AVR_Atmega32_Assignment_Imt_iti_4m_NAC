@@ -1,0 +1,7 @@
+In case of right adjustment:
+    res = ADC_u8_ADCL;
+    res |= ( ( (u16)ADC_u8_ADCH ) << 8 );
+	
+In case of left adjustment:
+    res = ADC_u8_ADCL>>6;
+    res |= ( ( (u16)ADC_u8_ADCH ) << 2 );

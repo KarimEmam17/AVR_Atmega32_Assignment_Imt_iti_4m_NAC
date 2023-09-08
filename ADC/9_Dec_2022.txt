@@ -1,0 +1,65 @@
+ADC: Analog to digital converter
+SAR ADC : used in AVR
+
+ADC resolution: 10 bit ADC
+Level: 2^res = 2^10 = 1024 level
+
+Step = reference voltage/2^res = 5/1024 = 0.00488 volt = 5 mv
+
+Step = reference voltage/2^res = 2/1024 = .002 volt = 2 mv
+
+Step = reference voltage/2^res = 5/255 	= 0.019 volt
+
+analog value = digital value * step
+
+
+Prescalar=1: 8 MHZ/1
+		 =2: 8 MHZ/2
+		 =4: 8 MHZ/4
+////////////////////////////////////////////////////////////
+ADCH 			ADCL
+00000011		11111111
+
+00000011 00000000
+00000000 11111111
+-------------------
+00000011 11111111
+
+u16 x = ( (u16)ADCH ) << 8 | ADCL
+
+u16 x = ADCL
+x |= ( ( (u16)ADCH ) << 8 )
+
+
+u8 y = 0b00000011 		  --> y<<8 --> y = 0b00000000
+u16 y= 0b0000000000000011 --> y<<8 --> y = 0b0000001100000000
+////////////////////////////////////////////////////////
+0b00000011 11111111 --> 1023 --> 255
+0b11111111 11000000 --> 1023 --> 0b11111111
+							 --> 0b00000000 11111111
+							 --> 0b00000011 11111100 --> 1020
+							 
+u16 x = ( (u16)ADCH ) << 2
+////////////////////////////////////////////////////////
+0b00000000 11111111 --> 255
+0b00000011 11111100 --> 1020
+////////////////////////////////////////
+
+u8 z = 0b11111111;
+z = z<<8 --> z = 0b00000000;
+0b0000000011111111
+////////////////////////////////////
+Transducer:
+LDR: Light dependant resistor
+
+10 mv --> 1 degree C
+2.5 volt 
+2500 mv --> 250 degree
+250 mv --> 25 degree
+200 mv --> 20 degree
+////////////////////////////////////////////
+NTC: Negative Temp coefficient:
+PTC: Positive Temp coefficient
+
+
+
